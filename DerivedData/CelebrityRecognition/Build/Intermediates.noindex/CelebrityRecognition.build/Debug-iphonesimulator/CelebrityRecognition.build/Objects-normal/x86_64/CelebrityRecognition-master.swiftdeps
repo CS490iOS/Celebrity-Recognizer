@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "d35841c1c9be173b5c58622f96d43d01"
+build_time: [1518109472, 830861000]
+inputs:
+  "/Users/AshutoshSinha/Desktop/CelebrityRecognition/CelebrityRecognition/ViewController.swift": [1518109467, 0]
+  "/Users/AshutoshSinha/Desktop/CelebrityRecognition/CelebrityRecognition/AppDelegate.swift": [1518109467, 0]
