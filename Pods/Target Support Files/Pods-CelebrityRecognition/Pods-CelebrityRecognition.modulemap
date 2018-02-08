@@ -1,0 +1,6 @@
+framework module Pods_CelebrityRecognition {
+  umbrella header "Pods-CelebrityRecognition-umbrella.h"
+
+  export *
+  module * { export * }
+}
