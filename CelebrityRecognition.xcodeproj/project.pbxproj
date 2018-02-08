@@ -13,6 +13,7 @@
 		FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC47207E202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld */; };
 		FC472082202CBA9B0081B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC472081202CBA9B0081B08C /* Assets.xcassets */; };
 		FC472085202CBA9B0081B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */; };
+		FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = FC47208C202CBF700081B08C /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FC472081202CBA9B0081B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC472084202CBA9B0081B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC472086202CBA9B0081B08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC47208C202CBF700081B08C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				FC472081202CBA9B0081B08C /* Assets.xcassets */,
 				FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */,
 				FC472086202CBA9B0081B08C /* Info.plist */,
+				FC47208C202CBF700081B08C /* awsconfiguration.json */,
 				FC47207E202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld */,
 			);
 			path = CelebrityRecognition;
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */,
 				FC472085202CBA9B0081B08C /* LaunchScreen.storyboard in Resources */,
 				FC472082202CBA9B0081B08C /* Assets.xcassets in Resources */,
 				FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */,
