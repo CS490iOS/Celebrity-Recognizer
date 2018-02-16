@@ -33,9 +33,13 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.addSublayer(passwordBorder)
         passwordTextField.layer.masksToBounds = true
         
-        // Changing the placeholder text color so it actually shows against dark background
-        emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor.lightText])
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: passwordTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor.lightText])
+        // Changing the entered and placeholder text color so it actually shows against the dark background
+        emailTextField.attributedPlaceholder = NSAttributedString(string: emailTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: passwordTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
+        emailTextField.textColor = UIColor.white
+        passwordTextField.textColor = UIColor.white
+
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "LoginBGImage")!)
 
         
     }
