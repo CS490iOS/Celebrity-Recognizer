@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CA378850A2FBE300E4FB9AA /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
+		FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */; };
 		FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC472077202CBA9B0081B08C /* AppDelegate.swift */; };
 		FC47207A202CBA9B0081B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC472079202CBA9B0081B08C /* ViewController.swift */; };
 		FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC47207B202CBA9B0081B08C /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		1AD7B56130FCEB504F44D88E /* Pods-CelebrityRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.release.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebrityRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D001536A1D68ED83213967 /* Pods-CelebrityRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC472074202CBA9B0081B08C /* CelebrityRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CelebrityRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC472077202CBA9B0081B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC472079202CBA9B0081B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FC2DBF492036D12700CAD803 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC2DBF4A2036D13100CAD803 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC2DBF4B2036D13800CAD803 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		FC47206B202CBA9B0081B08C = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +106,9 @@
 		FC472076202CBA9B0081B08C /* CelebrityRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				FC2DBF4B2036D13800CAD803 /* View Controllers */,
+				FC2DBF4A2036D13100CAD803 /* Views */,
+				FC2DBF492036D12700CAD803 /* Models */,
 				FC472077202CBA9B0081B08C /* AppDelegate.swift */,
 				FC472079202CBA9B0081B08C /* ViewController.swift */,
 				FC47207B202CBA9B0081B08C /* Main.storyboard */,
@@ -230,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */,
 				FC47207A202CBA9B0081B08C /* ViewController.swift in Sources */,
 				FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */,
 				FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */,

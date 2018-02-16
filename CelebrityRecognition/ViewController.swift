@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import AWSRekognition
 
 class ViewController: UIViewController {
 
+    let recognition = AWSRekognition.default()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
