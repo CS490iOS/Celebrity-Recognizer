@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -39,7 +40,8 @@ class LoginViewController: UIViewController {
         emailTextField.textColor = UIColor.white
         passwordTextField.textColor = UIColor.white
 
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "LoginBGImage")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "LoginBGImage")!)
+        backgroundImageView.image = UIImage(named: "LoginBGImage")
 
         
     }
