@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		5CA378850A2FBE300E4FB9AA /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
 		FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */; };
+		FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */; };
 		FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC472077202CBA9B0081B08C /* AppDelegate.swift */; };
-		FC47207A202CBA9B0081B08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC472079202CBA9B0081B08C /* ViewController.swift */; };
 		FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC47207B202CBA9B0081B08C /* Main.storyboard */; };
 		FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC47207E202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld */; };
 		FC472082202CBA9B0081B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC472081202CBA9B0081B08C /* Assets.xcassets */; };
 		FC472085202CBA9B0081B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */; };
 		FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = FC47208C202CBF700081B08C /* awsconfiguration.json */; };
+		FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */; };
+		FC70E2372038BE5E00B9F321 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */; };
+		FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,15 +26,18 @@
 		CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebrityRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D001536A1D68ED83213967 /* Pods-CelebrityRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
 		FC472074202CBA9B0081B08C /* CelebrityRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CelebrityRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC472077202CBA9B0081B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC472079202CBA9B0081B08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC47207C202CBA9B0081B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC47207F202CBA9B0081B08C /* CelebrityRecognition.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CelebrityRecognition.xcdatamodel; sourceTree = "<group>"; };
 		FC472081202CBA9B0081B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC472084202CBA9B0081B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC472086202CBA9B0081B08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC47208C202CBF700081B08C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesViewController.swift; sourceTree = "<group>"; };
+		FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		FC2DBF4A2036D13100CAD803 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,7 +87,10 @@
 		FC2DBF4B2036D13800CAD803 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */,
 				FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */,
+				FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */,
+				FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -110,7 +120,6 @@
 				FC2DBF4A2036D13100CAD803 /* Views */,
 				FC2DBF492036D12700CAD803 /* Models */,
 				FC472077202CBA9B0081B08C /* AppDelegate.swift */,
-				FC472079202CBA9B0081B08C /* ViewController.swift */,
 				FC47207B202CBA9B0081B08C /* Main.storyboard */,
 				FC472081202CBA9B0081B08C /* Assets.xcassets */,
 				FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */,
@@ -215,17 +224,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSRekognition/AWSRekognition.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALCameraViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSRekognition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,8 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */,
-				FC47207A202CBA9B0081B08C /* ViewController.swift in Sources */,
+				FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */,
+				FC70E2372038BE5E00B9F321 /* SettingsViewController.swift in Sources */,
+				FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */,
 				FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */,
+				FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */,
 				FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSMobileClient
+import AWSCore
 
 class LoginViewController: UIViewController {
 
@@ -15,6 +17,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBAction func onLogin(_ sender: Any) {
+        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +45,9 @@ class LoginViewController: UIViewController {
         emailTextField.textColor = UIColor.white
         passwordTextField.textColor = UIColor.white
 
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "LoginBGImage")!)
-        backgroundImageView.image = UIImage(named: "LoginBGImage")
+        //backgroundImageView.image = UIImage(named: "LoginBGImage")
+        
+        
 
         
     }

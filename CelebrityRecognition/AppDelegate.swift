@@ -18,8 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
-        AWSDDLog.sharedInstance.logLevel = .info
+        /*AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
+        AWSDDLog.sharedInstance.logLevel = .info*/
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(
+            regionType: .USWest2,
+            identityPoolId: "us-west-2:cf833ced-40e2-417d-9bf0-1919a551025d")
+        
+        let configuration = AWSServiceConfiguration(
+            region: .USWest2 ,
+            credentialsProvider: credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
         
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
     }
