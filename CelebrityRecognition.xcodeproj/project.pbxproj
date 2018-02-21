@@ -18,6 +18,7 @@
 		FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = FC47208C202CBF700081B08C /* awsconfiguration.json */; };
 		FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */; };
 		FC70E2372038BE5E00B9F321 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */; };
+		FC70E2392038C86500B9F321 /* CelebrityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2382038C86500B9F321 /* CelebrityInfoViewController.swift */; };
 		FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		FC47208C202CBF700081B08C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesViewController.swift; sourceTree = "<group>"; };
 		FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FC70E2382038C86500B9F321 /* CelebrityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityInfoViewController.swift; sourceTree = "<group>"; };
 		FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */,
 				FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */,
 				FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */,
+				FC70E2382038C86500B9F321 /* CelebrityInfoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */,
 				FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */,
 				FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */,
+				FC70E2392038C86500B9F321 /* CelebrityInfoViewController.swift in Sources */,
 				FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

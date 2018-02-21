@@ -139,11 +139,52 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Yoi-XA-bps" id="VGm-3J-W52"/>
+                        <segue destination="y4j-dT-Mbp" kind="show" identifier="detailSegue" id="Zyp-6V-uLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Oc-tj-QRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146.40000000000001" y="1479.3103448275863"/>
+            <point key="canvasLocation" x="532" y="1496"/>
+        </scene>
+        <!--Celebrity Info View Controller-->
+        <scene sceneID="20d-zM-z3K">
+            <objects>
+                <viewController storyboardIdentifier="detailController" id="y4j-dT-Mbp" customClass="CelebrityInfoViewController" customModule="CelebrityRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWf-CM-gka">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zeO-KB-8Fd">
+                                <rect key="frame" x="67" y="102" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-st-DOz">
+                                <rect key="frame" x="67" y="257" width="240" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Urls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMU-xc-gcQ">
+                                <rect key="frame" x="67" y="402" width="240" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1mu-4X-jiU"/>
+                    </view>
+                    <connections>
+                        <outlet property="celebPicture" destination="zeO-KB-8Fd" id="WQq-nz-scv"/>
+                        <outlet property="nameLabel" destination="OcB-st-DOz" id="Nyb-Yr-fgM"/>
+                        <outlet property="urlLabel" destination="pMU-xc-gcQ" id="NSx-iY-O1r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVg-jW-LRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538.39999999999998" y="2240.3298350824589"/>
         </scene>
         <!--Photo Picker View Controller-->
         <scene sceneID="GQm-Xl-ElV">
@@ -169,17 +210,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvS-dj-UhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="2304"/>
+            <point key="canvasLocation" x="1847" y="2419"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VaG-ul-gQV">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="q7K-1O-cBg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="HTe-lO-9VF">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HTe-lO-9VF">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
@@ -228,22 +270,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wh-RX-uSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2127.1999999999998" y="731.78410794602701"/>
+            <point key="canvasLocation" x="1382" y="1496"/>
         </scene>
         <!--Recent-->
         <scene sceneID="69R-45-o68">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9R4-Ve-qo5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recent" image="reel_tabbar_icon" selectedImage="reel_tabbar_icon" id="xvv-ye-7Ck">
-                        <color key="badgeColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Recent" image="reel_tabbar_icon" selectedImage="reel_tabbar_icon" id="xvv-ye-7Ck"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="42h-Gk-eMe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
                             <color key="textColor" red="0.99544221162796021" green="0.18044358491897583" blue="0.53602606058120728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -254,20 +294,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OO0-f3-e1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="752"/>
+            <point key="canvasLocation" x="532" y="781"/>
         </scene>
         <!--Settings-->
         <scene sceneID="36E-eS-Ihe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e2g-uw-7Qa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="profile_tab" selectedImage="profile_tab" id="R7Z-fV-wpu">
-                        <color key="badgeColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Settings" image="profile_tab" selectedImage="profile_tab" id="R7Z-fV-wpu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KBN-1T-HOG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
                             <color key="textColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

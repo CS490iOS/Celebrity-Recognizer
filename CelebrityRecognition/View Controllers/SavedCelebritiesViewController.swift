@@ -13,34 +13,49 @@ import AWSRekognition
 class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    let recognition = AWSRekognition.default()
+    var faces = [AWSRekognitionCelebrity?]()
+    var currentCelebrity = AWSRekognitionCelebrity()
+    var takenPicture = UIImage()
+    var image = UIImage(named: "LoginBGImage")
     
     @IBAction func onCamera(_ sender: Any) {
-        //performSegue(withIdentifier: "photoPickerSegue", sender: nil)
+        var imageSelected = false
         let cameraVC = CameraViewController { (image, asset) in
             
-            let recognition = AWSRekognition.default()
-            let sourceImage = image
-            let image = AWSRekognitionImage()
-            image?.bytes = UIImageJPEGRepresentation(sourceImage!, 0.6)
-            
-            guard let request = AWSRekognitionRecognizeCelebritiesRequest() else {
-                puts("Unable to initialize AWSRekognitionDetectLabelsRequest.")
-                return
-            }
-            request.image = image
-            recognition.recognizeCelebrities(request) { (response, error) in
-                if error == nil{
-                    let faces = response?.celebrityFaces
-                    for face in faces!{
-                        print("Possible name:\(face.name)")
+            if let sourceImage = image{
+                let image = AWSRekognitionImage()
+                image?.bytes = UIImageJPEGRepresentation(sourceImage, 0.6)
+                self.takenPicture = sourceImage
+                guard let request = AWSRekognitionRecognizeCelebritiesRequest() else {
+                    puts("Unable to initialize AWSRekognitionDetectLabelsRequest.")
+                    return
+                }
+                request.image = image
+                
+                self.recognition.recognizeCelebrities(request) { (response, error) in
+                    if error == nil{
+                        let faces = response?.celebrityFaces
+                        self.faces = faces!
+                        imageSelected = true
+                        self.currentCelebrity = faces?[0]
+                        for face in faces!{
+                            print("Possible name:\(face.name)")
+                        }
+                    }else{
+                        print("The error is : \n\n\n" + (error.debugDescription))
                     }
-                }else{
-                    print("The error is : \n\n\n" + (error.debugDescription))
                 }
             }
             self.dismiss(animated: true, completion: nil)
         }
         present(cameraVC, animated: true, completion: nil)
+        
+        if(imageSelected){
+            imageSelected = false
+            self.performSegue(withIdentifier: "detailSegue", sender: nil)
+        }
+        
         
     }
     
@@ -66,14 +81,17 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let dest = segue.destination as! CelebrityInfoViewController
+        dest.celebrity = self.currentCelebrity
+        dest.celebPicture.image = self.takenPicture
     }
-    */
+    
 
 }
