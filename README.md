@@ -8,8 +8,8 @@ Time spent: **X** hours spent in total
 
 The following functionality is planned to be completed:
 
-- [ ] User can take a picture of the celebrity
-- [ ] User can upload the picture of a celebrity from their photo library
+- [X] User can take a picture of the celebrity
+- [X] User can upload the picture of a celebrity from their photo library
 - [ ] User can view previously recognized celebrities
 - [ ] User can tap a celebrity to view details, including popular and recent movies
 
@@ -34,7 +34,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Shaurya Sinha]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
