@@ -42,6 +42,10 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
                         for face in faces!{
                             print("Possible name:\(face.name)")
                         }
+                        DispatchQueue.main.async(){
+                            self.performSegue(withIdentifier: "detailSegue", sender: nil)
+                        }
+                        
                     }else{
                         print("The error is : \n\n\n" + (error.debugDescription))
                     }
@@ -90,7 +94,7 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
         // Pass the selected object to the new view controller.
         let dest = segue.destination as! CelebrityInfoViewController
         dest.celebrity = self.currentCelebrity
-        dest.celebPicture.image = self.takenPicture
+       // dest.celebPicture.image = self.takenPicture
     }
     
 
