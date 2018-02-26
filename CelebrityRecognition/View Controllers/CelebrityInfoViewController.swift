@@ -8,6 +8,7 @@
 
 import AWSRekognition
 import UIKit
+import AlamofireImage
 
 class CelebrityInfoViewController: UIViewController {
     
@@ -17,13 +18,35 @@ class CelebrityInfoViewController: UIViewController {
     @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var recognizedCelebrity : Celebrity?
+    var imageUrl: URL?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        nameLabel.text = celebrity!.name
-        urlLabel.text = celebrity!.urls![0]
+        if let celeb = recognizedCelebrity{
+            nameLabel.text = celeb.name
+        }else{
+            nameLabel.text = "Loogabarooga"
+        }
         
+        
+        var knownForText = "You've seen them in: "
+        
+        print(recognizedCelebrity!.knownFor)
+        for movie in (recognizedCelebrity!.knownFor)!{
+            if(movie != nil){
+                let temp = movie as! [String: Any]
+                knownForText += temp["original_title"] as! String + "\n"
+            }
+            
+        }
+        
+        urlLabel.text = knownForText
+        
+        celebPicture.af_setImage(withURL: self.imageUrl!)
     }
     
     override func didReceiveMemoryWarning() {

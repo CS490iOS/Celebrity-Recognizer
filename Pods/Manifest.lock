@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (4.6.0)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
   - ALCameraViewController (3.0.2)
   - AWSAuthCore (2.6.10):
     - AWSCore (= 2.6.10)
@@ -58,6 +61,7 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - AlamofireImage (~> 3.1)
   - ALCameraViewController
   - AWSCognito
   - AWSMobileClient (~> 2.6.6)
@@ -68,6 +72,8 @@ DEPENDENCIES:
   - FirebaseDatabase
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   ALCameraViewController: 1edce3497633f0df138523645ed1228961ee2eab
   AWSAuthCore: d5e52ee671c815bee92c8fc1077fb6bd526f026a
   AWSCognito: 94d97a52c51310dfd20f2db5dc4fce7ebce0e8dc
@@ -86,6 +92,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 2d3db92fd614ec9b45991c05c7550964a9a5202c
+PODFILE CHECKSUM: 23dcbad821e47d668d3dd89cf1f1c1ec51dc7286
 
 COCOAPODS: 1.4.0

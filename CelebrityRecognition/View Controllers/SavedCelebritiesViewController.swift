@@ -17,48 +17,72 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
     var faces = [AWSRekognitionCelebrity?]()
     var currentCelebrity = AWSRekognitionCelebrity()
     var takenPicture = UIImage()
-    var image = UIImage(named: "LoginBGImage")
+    var recognizedCelebrity : Celebrity?
+    var imageUrl: URL?
+
+    var celebrityName: String?
+    
+    // Variables for AWS Rekognition
+    var sourceImage: UIImage?
     
     @IBAction func onCamera(_ sender: Any) {
-        var imageSelected = false
         let cameraVC = CameraViewController { (image, asset) in
-            
             if let sourceImage = image{
-                let image = AWSRekognitionImage()
-                image?.bytes = UIImageJPEGRepresentation(sourceImage, 0.6)
-                self.takenPicture = sourceImage
-                guard let request = AWSRekognitionRecognizeCelebritiesRequest() else {
-                    puts("Unable to initialize AWSRekognitionDetectLabelsRequest.")
-                    return
-                }
-                request.image = image
-                
-                self.recognition.recognizeCelebrities(request) { (response, error) in
-                    if error == nil{
-                        let faces = response?.celebrityFaces
-                        self.faces = faces!
-                        imageSelected = true
-                        self.currentCelebrity = faces?[0]
-                        for face in faces!{
-                            print("Possible name:\(face.name)")
-                        }
-                        DispatchQueue.main.async(){
-                            self.performSegue(withIdentifier: "detailSegue", sender: nil)
-                        }
-                        
-                    }else{
-                        print("The error is : \n\n\n" + (error.debugDescription))
-                    }
-                }
+                self.sourceImage = sourceImage
             }
-            self.dismiss(animated: true, completion: nil)
+            let group = DispatchGroup()
+            let image = AWSRekognitionImage()
+            image?.bytes = UIImageJPEGRepresentation(self.sourceImage!, 0.6)
+            
+            guard let request = AWSRekognitionRecognizeCelebritiesRequest() else {
+                puts("Unable to initialize AWSRekognitionDetectLabelsRequest.")
+                return
+            }
+            request.image = image
+            group.enter()
+            self.recognition.recognizeCelebrities(request) { (response, error) in
+                if error == nil{
+                    let faces = response?.celebrityFaces
+                    self.faces = faces!
+                    self.currentCelebrity = faces?[0]
+                    
+                    if let name = faces?[0].name{
+                        self.celebrityName = name
+                    }else{
+                        print("No recognition Found")
+                    }
+                    //print("1)\n\nRecognized celeb is: \(self.celebrityName)\n\n")
+                }else{
+                    print("The error is : \n\n\n" + (error.debugDescription))
+                }
+                group.leave()
+            }
+            group.wait()
+            group.enter()
+            MovieApiManager().getCelebrity(searchQuery: self.celebrityName!, completion: { (celeb, error) in
+                if let celeb = celeb{
+                    self.recognizedCelebrity = celeb
+                }
+                group.leave()
+            })
+            //group.wait()
+            //group.enter()
+            
+            
+            group.notify(queue: .main, execute: {
+                MovieApiManager().getImage(id: self.recognizedCelebrity!.id, completion: { (url, error) in
+                    if let url = url{
+                        self.imageUrl = url
+                    }
+                    // group.leave()
+                })
+                self.dismiss(animated: true, completion: {
+                    self.performSegue(withIdentifier: "detailSegue", sender: nil)
+                })
+                
+            })
         }
         present(cameraVC, animated: true, completion: nil)
-        
-        if(imageSelected){
-            imageSelected = false
-            self.performSegue(withIdentifier: "detailSegue", sender: nil)
-        }
         
         
     }
@@ -78,23 +102,18 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         let dest = segue.destination as! CelebrityInfoViewController
-        dest.celebrity = self.currentCelebrity
-       // dest.celebPicture.image = self.takenPicture
+        if let celeb = self.recognizedCelebrity{
+            dest.recognizedCelebrity = celeb
+        }else{
+            print("Celeb not found"	)
+        }
+        dest.imageUrl = self.imageUrl
     }
     
 

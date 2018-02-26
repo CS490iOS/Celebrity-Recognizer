@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5CA378850A2FBE300E4FB9AA /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
+		FC14B9502040B40B00FB0562 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14B94F2040B40B00FB0562 /* Celebrity.swift */; };
 		FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */; };
 		FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */; };
+		FC3DC5F32040A7F900435AD0 /* MovieAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3DC5F22040A7F900435AD0 /* MovieAPIManager.swift */; };
 		FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC472077202CBA9B0081B08C /* AppDelegate.swift */; };
 		FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC47207B202CBA9B0081B08C /* Main.storyboard */; };
 		FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC47207E202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld */; };
@@ -26,8 +28,10 @@
 		1AD7B56130FCEB504F44D88E /* Pods-CelebrityRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.release.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebrityRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D001536A1D68ED83213967 /* Pods-CelebrityRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		FC14B94F2040B40B00FB0562 /* Celebrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
 		FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
+		FC3DC5F22040A7F900435AD0 /* MovieAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIManager.swift; sourceTree = "<group>"; };
 		FC472074202CBA9B0081B08C /* CelebrityRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CelebrityRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC472077202CBA9B0081B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC47207C202CBA9B0081B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		FC2DBF492036D12700CAD803 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FC14B94F2040B40B00FB0562 /* Celebrity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				FC2DBF4A2036D13100CAD803 /* Views */,
 				FC2DBF492036D12700CAD803 /* Models */,
 				FC472077202CBA9B0081B08C /* AppDelegate.swift */,
+				FC3DC5F22040A7F900435AD0 /* MovieAPIManager.swift */,
 				FC47207B202CBA9B0081B08C /* Main.storyboard */,
 				FC472081202CBA9B0081B08C /* Assets.xcassets */,
 				FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */,
@@ -233,6 +239,8 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSRekognition/AWSRekognition.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -246,6 +254,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSRekognition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -284,9 +294,11 @@
 				FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */,
 				FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */,
 				FC70E2372038BE5E00B9F321 /* SettingsViewController.swift in Sources */,
+				FC3DC5F32040A7F900435AD0 /* MovieAPIManager.swift in Sources */,
 				FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */,
 				FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */,
 				FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */,
+				FC14B9502040B40B00FB0562 /* Celebrity.swift in Sources */,
 				FC70E2392038C86500B9F321 /* CelebrityInfoViewController.swift in Sources */,
 				FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */,
 			);

@@ -15,6 +15,7 @@ target 'CelebrityRecognition' do
       pod 'FirebaseDatabase'
       
       pod 'ALCameraViewController'
+      pod ‘AlamofireImage’, '~> 3.1'
 
 
 end
