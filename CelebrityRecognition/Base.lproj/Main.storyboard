@@ -50,7 +50,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-mB-xNd">
                                 <rect key="frame" x="26" y="371" width="323" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98039215800000001" green="0.0" blue="0.46274510029999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.17254901960784313" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,7 +139,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Yoi-XA-bps" id="VGm-3J-W52"/>
-                        <segue destination="y4j-dT-Mbp" kind="show" identifier="detailSegue" id="Zyp-6V-uLU"/>
+                        <segue destination="y4j-dT-Mbp" kind="presentation" identifier="detailSegue" id="Zyp-6V-uLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Oc-tj-QRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,34 +154,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zeO-KB-8Fd">
-                                <rect key="frame" x="0.0" y="102" width="375" height="406"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeO-KB-8Fd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="517"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-st-DOz">
-                                <rect key="frame" x="67" y="390" width="240" height="87"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-st-DOz">
+                                <rect key="frame" x="67" y="275" width="240" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Urls" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMU-xc-gcQ">
-                                <rect key="frame" x="67" y="516" width="240" height="119"/>
+                                <rect key="frame" x="67" y="36" width="240" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RLs-KN-3OG">
+                                <rect key="frame" x="20" y="489" width="335" height="128"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Q9J-xs-rCX"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dDp-hS-YcY">
+                                    <size key="itemSize" width="100" height="126"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5.8330000000000002" minY="0.0" maxX="5.8330000000000002" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="posterCell" id="xAc-XO-gLJ" customClass="PosterCell" customModule="CelebrityRecognition" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="0.0" width="100" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7QP-bI-CiG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="126"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7QP-bI-CiG" secondAttribute="trailing" id="4oa-5N-RbN"/>
+                                            <constraint firstItem="7QP-bI-CiG" firstAttribute="top" secondItem="xAc-XO-gLJ" secondAttribute="top" id="Djp-FH-sw5"/>
+                                            <constraint firstItem="7QP-bI-CiG" firstAttribute="leading" secondItem="xAc-XO-gLJ" secondAttribute="leading" id="e8d-hx-2Ej"/>
+                                            <constraint firstAttribute="bottom" secondItem="7QP-bI-CiG" secondAttribute="bottom" id="fgV-0J-Vwi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="posterView" destination="7QP-bI-CiG" id="c6V-t6-IaF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-6W-Nda">
+                                <rect key="frame" x="10" y="13" width="38" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="cancel_icon"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="y4j-dT-Mbp" eventType="touchUpInside" id="rB8-fM-WW4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1mu-4X-jiU" firstAttribute="bottom" secondItem="zeO-KB-8Fd" secondAttribute="bottom" constant="50" id="HI1-Mr-uE3"/>
+                            <constraint firstItem="zeO-KB-8Fd" firstAttribute="top" secondItem="1mu-4X-jiU" secondAttribute="top" id="FB7-pd-1Or"/>
+                            <constraint firstItem="1mu-4X-jiU" firstAttribute="bottom" secondItem="zeO-KB-8Fd" secondAttribute="bottom" constant="130" id="HI1-Mr-uE3"/>
                             <constraint firstItem="zeO-KB-8Fd" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" id="LU0-Fi-flC"/>
+                            <constraint firstItem="1mu-4X-jiU" firstAttribute="bottom" secondItem="RLs-KN-3OG" secondAttribute="bottom" constant="50" id="elM-vL-PK6"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="trailing" secondItem="zeO-KB-8Fd" secondAttribute="trailing" id="mGy-2I-mhH"/>
+                            <constraint firstItem="RLs-KN-3OG" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" constant="20" id="pIT-5m-8wl"/>
+                            <constraint firstItem="1mu-4X-jiU" firstAttribute="trailing" secondItem="RLs-KN-3OG" secondAttribute="trailing" constant="20" id="rrA-Yu-we0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1mu-4X-jiU"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="XUa-6W-Nda" id="22f-1d-Imd"/>
                         <outlet property="celebPicture" destination="zeO-KB-8Fd" id="WQq-nz-scv"/>
+                        <outlet property="collectionView" destination="RLs-KN-3OG" id="EXE-dE-fXi"/>
                         <outlet property="nameLabel" destination="OcB-st-DOz" id="Nyb-Yr-fgM"/>
                         <outlet property="urlLabel" destination="pMU-xc-gcQ" id="NSx-iY-O1r"/>
                     </connections>
@@ -224,16 +277,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HTe-lO-9VF">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.93434602022171021" green="0.26777347922325134" blue="0.26665323972702026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.99544221162796021" green="0.18044358491897583" blue="0.53602606058120728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.90588235294117647" green="0.17254901960784313" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" red="0.9056820273399353" green="0.17254140973091125" blue="0.20904213190078735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -280,9 +331,7 @@
         <scene sceneID="69R-45-o68">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9R4-Ve-qo5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recent" image="reel_tabbar_icon" selectedImage="reel_tabbar_icon" id="xvv-ye-7Ck">
-                        <color key="badgeColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Recent" image="reel_tabbar_icon" selectedImage="reel_tabbar_icon" id="xvv-ye-7Ck"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="42h-Gk-eMe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -290,7 +339,7 @@
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
-                            <color key="textColor" red="0.99544221162796021" green="0.18044358491897583" blue="0.53602606058120728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.90588235289999997" green="0.17254901959999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -314,7 +363,7 @@
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
-                            <color key="textColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.90588235289999997" green="0.17254901959999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -329,6 +378,7 @@
     </scenes>
     <resources>
         <image name="LoginBGImage" width="572" height="966"/>
+        <image name="cancel_icon" width="256" height="256"/>
         <image name="profile_tab" width="25" height="25"/>
         <image name="reel_tabbar_icon" width="25" height="25"/>
     </resources>

@@ -114,6 +114,16 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
             print("Celeb not found"	)
         }
         dest.imageUrl = self.imageUrl
+        
+        var movies: [Movie] = []
+        for movie in (self.recognizedCelebrity!.knownFor)!{
+            if(!(movie is NSNull)){
+                let temp = movie as! [String: Any]
+                let movie = Movie(dictionary: temp)
+                movies.append(movie)
+            }
+        }
+        dest.Movies = movies
     }
     
 

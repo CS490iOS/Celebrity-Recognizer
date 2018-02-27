@@ -21,6 +21,8 @@
 		FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */; };
 		FC70E2372038BE5E00B9F321 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */; };
 		FC70E2392038C86500B9F321 /* CelebrityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2382038C86500B9F321 /* CelebrityInfoViewController.swift */; };
+		FCBB64862044D69E005E38F9 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB64852044D69E005E38F9 /* PosterCell.swift */; };
+		FCBB64882044D7F7005E38F9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB64872044D7F7005E38F9 /* Movie.swift */; };
 		FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesViewController.swift; sourceTree = "<group>"; };
 		FC70E2362038BE5E00B9F321 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FC70E2382038C86500B9F321 /* CelebrityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityInfoViewController.swift; sourceTree = "<group>"; };
+		FCBB64852044D69E005E38F9 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		FCBB64872044D7F7005E38F9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				FC14B94F2040B40B00FB0562 /* Celebrity.swift */,
+				FCBB64872044D7F7005E38F9 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */,
+				FCBB64852044D69E005E38F9 /* PosterCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBB64862044D69E005E38F9 /* PosterCell.swift in Sources */,
 				FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */,
+				FCBB64882044D7F7005E38F9 /* Movie.swift in Sources */,
 				FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */,
 				FC70E2372038BE5E00B9F321 /* SettingsViewController.swift in Sources */,
 				FC3DC5F32040A7F900435AD0 /* MovieAPIManager.swift in Sources */,

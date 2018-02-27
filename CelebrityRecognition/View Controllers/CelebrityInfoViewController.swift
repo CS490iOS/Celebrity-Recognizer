@@ -10,22 +10,39 @@ import AWSRekognition
 import UIKit
 import AlamofireImage
 
-class CelebrityInfoViewController: UIViewController {
+class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource {
     
     var celebrity = AWSRekognitionCelebrity()
+    var Movies: [Movie] = []
 
     @IBOutlet weak var celebPicture: UIImageView!
     @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBAction func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    // Celebrity Properties
     var recognizedCelebrity : Celebrity?
     var imageUrl: URL?
     
+    //Movie Poster Properties
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Button
+        let tint = UIColor(displayP3Red: 254, green: 46, blue: 137, alpha: 1)
+        cancelButton.tintColor = tint
         
-        // Do any additional setup after loading the view.
+        // Collection View Stuff
+        collectionView.dataSource = self
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.scrollDirection = .horizontal
+        
+        
+        // Celebrity Stuff
         if let celeb = recognizedCelebrity{
             nameLabel.text = celeb.name
         }else{
@@ -37,7 +54,7 @@ class CelebrityInfoViewController: UIViewController {
         
         print(recognizedCelebrity!.knownFor)
         for movie in (recognizedCelebrity!.knownFor)!{
-            if(movie != nil){
+            if(!(movie is NSNull)){
                 let temp = movie as! [String: Any]
                 knownForText += temp["original_title"] as! String + "\n"
             }
@@ -49,20 +66,20 @@ class CelebrityInfoViewController: UIViewController {
         celebPicture.af_setImage(withURL: self.imageUrl!)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return Movies.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "posterCell", for: indexPath) as! PosterCell
+        let movie = Movies[indexPath.item]
+        
+        cell.posterView.af_setImage(withURL: movie.posterUrl!)
+        cell.layer.borderWidth = 1.4
+        cell.layer.borderColor = UIColor.red.cgColor
+        
+        
+        return cell
     }
-    */
 
 }
