@@ -12,7 +12,7 @@ class MovieApiManager{
     static let baseUrl = "https://api.themoviedb.org/3/movie/"
     static let searchUrl = "https://api.themoviedb.org/3/search/person"
     static let apiKey = "4aebe566ef8c2257a0ca6a337f1994ef"
-    static let imageUrlPrefix = "https://image.tmdb.org/t/p/w500/"
+    static let imageUrlPrefix = "https://image.tmdb.org/t/p/w780/"
     var session: URLSession
     
     init() {
