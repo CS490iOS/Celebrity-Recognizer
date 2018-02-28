@@ -16,14 +16,13 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
     var Movies: [Movie] = []
 
     @IBOutlet weak var celebPicture: UIImageView!
-    @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var cancelButton: UIButton!
     @IBAction func onCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    @IBOutlet weak var gradientView: UIView!
     // Celebrity Properties
     var recognizedCelebrity : Celebrity?
     var imageUrl: URL?
@@ -32,9 +31,28 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Button
-        let tint = UIColor(displayP3Red: 254, green: 46, blue: 137, alpha: 1)
-        cancelButton.tintColor = tint
+        /*
+        cancelButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        cancelButton.layer.cornerRadius = 0.5 * cancelButton.bounds.size.width
+        let color = UIColor(patternImage: UIImage(named: "cancel_icon")!)
+        cancelButton.backgroundColor = color*/
+        /*
+        let button = UIButton()
+        button.frame = CGRect(x: 0, y: 0, width: 40, height: 40) //CGRectMake(0, 0, 40, 40)
+        let color = UIColor(patternImage: UIImage(named: "cancel_icon")!)
+        button.backgroundColor = color
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        let barButton = UIBarButtonItem()
+        barButton.customView = button
+        self.navigationItem.leftBarButtonItem = barButton
+         */
+        
+        // Gradient View at bottom of celebrity picture
+        let gradient = CAGradientLayer()
+        gradient.frame = gradientView.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.darkGray.cgColor, UIColor.black.cgColor]
+        gradient.locations = [0, 0.65, 1]
+        gradientView.layer.mask = gradient
         
         // Collection View Stuff
         collectionView.dataSource = self
@@ -49,20 +67,6 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
             nameLabel.text = "Loogabarooga"
         }
         
-        
-        var knownForText = "You've seen them in: "
-        
-        print(recognizedCelebrity!.knownFor)
-        for movie in (recognizedCelebrity!.knownFor)!{
-            if(!(movie is NSNull)){
-                let temp = movie as! [String: Any]
-                knownForText += temp["original_title"] as! String + "\n"
-            }
-            
-        }
-        
-        urlLabel.text = knownForText
-        
         celebPicture.af_setImage(withURL: self.imageUrl!)
     }
     
@@ -76,7 +80,7 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
         
         cell.posterView.af_setImage(withURL: movie.posterUrl!)
         cell.layer.borderWidth = 1.4
-        cell.layer.borderColor = UIColor.red.cgColor
+        cell.layer.borderColor = UIColor.white.cgColor
         
         
         return cell

@@ -154,8 +154,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeO-KB-8Fd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="517"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeO-KB-8Fd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-st-DOz">
@@ -165,16 +165,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Urls" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMU-xc-gcQ">
-                                <rect key="frame" x="67" y="36" width="240" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-Me-CmA">
+                                <rect key="frame" x="0.0" y="358" width="375" height="309"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.91794162326388884" green="0.641357421875" blue="0.011764706112444401" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="309" id="Uof-aX-3ra"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RLs-KN-3OG">
                                 <rect key="frame" x="20" y="489" width="335" height="128"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.91794162326388884" green="0.023529412224888802" blue="0.011764706112444401" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Q9J-xs-rCX"/>
                                 </constraints>
@@ -209,9 +210,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-6W-Nda">
-                                <rect key="frame" x="10" y="13" width="38" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-6W-Nda">
+                                <rect key="frame" x="16" y="20" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="75h-5z-gV6"/>
+                                    <constraint firstAttribute="width" constant="38" id="Ylm-LV-AYx"/>
+                                </constraints>
                                 <color key="tintColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="cancel_icon"/>
                                 <connections>
@@ -221,13 +225,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zeO-KB-8Fd" firstAttribute="top" secondItem="1mu-4X-jiU" secondAttribute="top" id="FB7-pd-1Or"/>
+                            <constraint firstItem="XUa-6W-Nda" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" constant="16" id="3L7-jJ-MXo"/>
+                            <constraint firstItem="HdP-Me-CmA" firstAttribute="trailing" secondItem="1mu-4X-jiU" secondAttribute="trailing" id="B19-NN-G2r"/>
+                            <constraint firstItem="zeO-KB-8Fd" firstAttribute="top" secondItem="1mu-4X-jiU" secondAttribute="top" constant="-20" id="FB7-pd-1Or"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="bottom" secondItem="zeO-KB-8Fd" secondAttribute="bottom" constant="130" id="HI1-Mr-uE3"/>
+                            <constraint firstItem="HdP-Me-CmA" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" id="IoE-Lb-yC1"/>
                             <constraint firstItem="zeO-KB-8Fd" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" id="LU0-Fi-flC"/>
+                            <constraint firstItem="HdP-Me-CmA" firstAttribute="bottom" secondItem="1mu-4X-jiU" secondAttribute="bottom" id="Uk3-9b-lEZ"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="bottom" secondItem="RLs-KN-3OG" secondAttribute="bottom" constant="50" id="elM-vL-PK6"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="trailing" secondItem="zeO-KB-8Fd" secondAttribute="trailing" id="mGy-2I-mhH"/>
                             <constraint firstItem="RLs-KN-3OG" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" constant="20" id="pIT-5m-8wl"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="trailing" secondItem="RLs-KN-3OG" secondAttribute="trailing" constant="20" id="rrA-Yu-we0"/>
+                            <constraint firstItem="XUa-6W-Nda" firstAttribute="top" secondItem="1mu-4X-jiU" secondAttribute="top" id="yZN-XU-9lD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1mu-4X-jiU"/>
                     </view>
@@ -235,8 +244,8 @@
                         <outlet property="cancelButton" destination="XUa-6W-Nda" id="22f-1d-Imd"/>
                         <outlet property="celebPicture" destination="zeO-KB-8Fd" id="WQq-nz-scv"/>
                         <outlet property="collectionView" destination="RLs-KN-3OG" id="EXE-dE-fXi"/>
+                        <outlet property="gradientView" destination="HdP-Me-CmA" id="onq-5E-P6a"/>
                         <outlet property="nameLabel" destination="OcB-st-DOz" id="Nyb-Yr-fgM"/>
-                        <outlet property="urlLabel" destination="pMU-xc-gcQ" id="NSx-iY-O1r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVg-jW-LRV" userLabel="First Responder" sceneMemberID="firstResponder"/>

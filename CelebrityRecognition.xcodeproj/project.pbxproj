@@ -15,7 +15,6 @@
 		FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC472077202CBA9B0081B08C /* AppDelegate.swift */; };
 		FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC47207B202CBA9B0081B08C /* Main.storyboard */; };
 		FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC47207E202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld */; };
-		FC472082202CBA9B0081B08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC472081202CBA9B0081B08C /* Assets.xcassets */; };
 		FC472085202CBA9B0081B08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */; };
 		FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = FC47208C202CBF700081B08C /* awsconfiguration.json */; };
 		FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2342038AC1D00B9F321 /* SavedCelebritiesViewController.swift */; };
@@ -23,6 +22,7 @@
 		FC70E2392038C86500B9F321 /* CelebrityInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC70E2382038C86500B9F321 /* CelebrityInfoViewController.swift */; };
 		FCBB64862044D69E005E38F9 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB64852044D69E005E38F9 /* PosterCell.swift */; };
 		FCBB64882044D7F7005E38F9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB64872044D7F7005E38F9 /* Movie.swift */; };
+		FCBB648B20468128005E38F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBB648A20468127005E38F9 /* Assets.xcassets */; };
 		FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,6 @@
 		FC472077202CBA9B0081B08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC47207C202CBA9B0081B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC47207F202CBA9B0081B08C /* CelebrityRecognition.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CelebrityRecognition.xcdatamodel; sourceTree = "<group>"; };
-		FC472081202CBA9B0081B08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC472084202CBA9B0081B08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC472086202CBA9B0081B08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC47208C202CBF700081B08C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		FC70E2382038C86500B9F321 /* CelebrityInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrityInfoViewController.swift; sourceTree = "<group>"; };
 		FCBB64852044D69E005E38F9 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		FCBB64872044D7F7005E38F9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FCBB648A20468127005E38F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,8 +135,8 @@
 				FC2DBF492036D12700CAD803 /* Models */,
 				FC472077202CBA9B0081B08C /* AppDelegate.swift */,
 				FC3DC5F22040A7F900435AD0 /* MovieAPIManager.swift */,
+				FCBB648A20468127005E38F9 /* Assets.xcassets */,
 				FC47207B202CBA9B0081B08C /* Main.storyboard */,
-				FC472081202CBA9B0081B08C /* Assets.xcassets */,
 				FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */,
 				FC472086202CBA9B0081B08C /* Info.plist */,
 				FC47208C202CBF700081B08C /* awsconfiguration.json */,
@@ -209,7 +209,7 @@
 			files = (
 				FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */,
 				FC472085202CBA9B0081B08C /* LaunchScreen.storyboard in Resources */,
-				FC472082202CBA9B0081B08C /* Assets.xcassets in Resources */,
+				FCBB648B20468128005E38F9 /* Assets.xcassets in Resources */,
 				FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
