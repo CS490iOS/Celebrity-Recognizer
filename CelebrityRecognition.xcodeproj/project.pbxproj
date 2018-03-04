@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		235D3BE6204BB27B00E192BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 235D3BE5204BB27B00E192BC /* GoogleService-Info.plist */; };
 		5CA378850A2FBE300E4FB9AA /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
 		FC14B9502040B40B00FB0562 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14B94F2040B40B00FB0562 /* Celebrity.swift */; };
 		FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1AD7B56130FCEB504F44D88E /* Pods-CelebrityRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.release.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.release.xcconfig"; sourceTree = "<group>"; };
+		235D3BE5204BB27B00E192BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebrityRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D001536A1D68ED83213967 /* Pods-CelebrityRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		FC14B94F2040B40B00FB0562 /* Celebrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				FC47207B202CBA9B0081B08C /* Main.storyboard */,
 				FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */,
 				FC472086202CBA9B0081B08C /* Info.plist */,
+				235D3BE5204BB27B00E192BC /* GoogleService-Info.plist */,
 				FC47208C202CBF700081B08C /* awsconfiguration.json */,
 				FC47207E202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld */,
 			);
@@ -209,6 +212,7 @@
 			files = (
 				FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */,
 				FC472085202CBA9B0081B08C /* LaunchScreen.storyboard in Resources */,
+				235D3BE6204BB27B00E192BC /* GoogleService-Info.plist in Resources */,
 				FCBB648B20468128005E38F9 /* Assets.xcassets in Resources */,
 				FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */,
 			);
@@ -446,12 +450,15 @@
 			baseConfigurationReference = F5D001536A1D68ED83213967 /* Pods-CelebrityRecognition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TWQXYA585K;
+				DEVELOPMENT_TEAM = MV4CHVMGDV;
 				INFOPLIST_FILE = CelebrityRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CS490Team.CelebrityRecognition;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CS490Team.CelebrityRecognitionme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,12 +469,15 @@
 			baseConfigurationReference = 1AD7B56130FCEB504F44D88E /* Pods-CelebrityRecognition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TWQXYA585K;
+				DEVELOPMENT_TEAM = MV4CHVMGDV;
 				INFOPLIST_FILE = CelebrityRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CS490Team.CelebrityRecognition;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CS490Team.CelebrityRecognitionme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

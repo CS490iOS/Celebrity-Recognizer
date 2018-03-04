@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import AWSMobileClient
 import AWSCore
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             credentialsProvider: credentialsProvider)
         
         AWSServiceManager.default().defaultServiceConfiguration = configuration
-        
+        FirebaseApp.configure()
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
     }
 

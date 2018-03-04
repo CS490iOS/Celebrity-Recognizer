@@ -9,8 +9,10 @@
 import UIKit
 import AWSMobileClient
 import AWSCore
+import Firebase
 
-class LoginViewController: UIViewController {
+
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -18,7 +20,76 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBAction func onLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user,error) in
+            if((error) != nil){
+                if error?._code == AuthErrorCode.wrongPassword.rawValue{
+                    self.errorHandling(typeOfError: "Wrong password")
+                }
+                else if  error?._code == AuthErrorCode.userNotFound.rawValue{
+                    self.errorHandling(typeOfError: "User does not exist")
+                }
+                else if  error?._code == AuthErrorCode.invalidEmail.rawValue{
+                    self.errorHandling(typeOfError: "Invalid email")
+                }
+               
+                
+            }else{
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+            
+            
+        }
+       
+    }
+    
+    @IBAction func onRegister(_ sender: UIButton) {
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user,error) in
+            if((error) != nil){
+                if error?._code == AuthErrorCode.emailAlreadyInUse.rawValue{
+                    self.errorHandling(typeOfError: "Email already exists")
+                }
+                else if  error?._code == AuthErrorCode.weakPassword.rawValue{
+                     self.errorHandling(typeOfError: "Password is weak")
+                }
+                else if  error?._code == AuthErrorCode.invalidEmail.rawValue{
+                    self.errorHandling(typeOfError: "Invalid email")
+                }
+                
+            }else{
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+            
+            
+        }
+       
+        
+    }
+    func errorHandling(typeOfError: String){
+        
+        let alertController = UIAlertController(title: "Error", message: typeOfError, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // handle cancel response here. Doing nothing will dismiss the view.
+        }
+        // add the cancel action to the alertController
+        alertController.addAction(cancelAction)
+        
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // handle response here.
+        }
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+        
+        present(alertController, animated: true) {
+            // optional code for what happens after the alert controller has finished presenting
+        }
+        
+        // Do any additional setup after loading the view.
+        
+        
+        
+        
     }
     
     override func viewDidLoad() {
@@ -44,6 +115,9 @@ class LoginViewController: UIViewController {
         passwordTextField.attributedPlaceholder = NSAttributedString(string: passwordTextField.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : UIColor.white])
         emailTextField.textColor = UIColor.white
         passwordTextField.textColor = UIColor.white
+        self.passwordTextField.delegate = self
+        self.emailTextField.delegate = self
+        
 
         //backgroundImageView.image = UIImage(named: "LoginBGImage")
         
@@ -57,6 +131,15 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        return true;
+    }
 
     /*
     // MARK: - Navigation
