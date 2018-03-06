@@ -18,12 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-M2-8Tf">
-                                <rect key="frame" x="100" y="245" width="175" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-M2-8Tf">
+                                <rect key="frame" x="102.5" y="248" width="170" height="170"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aGu-M2-8Tf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="KXE-xS-YHa"/>
+                            <constraint firstItem="aGu-M2-8Tf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zA6-B1-JLH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
