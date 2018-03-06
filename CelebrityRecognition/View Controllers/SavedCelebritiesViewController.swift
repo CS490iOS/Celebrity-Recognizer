@@ -28,17 +28,16 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
     @IBAction func onCamera(_ sender: Any) {
         let cameraVC = CameraViewController { (image, asset) in
             if let sourceImage = image{
-                self.sourceImage = sourceImage
-            }
+            self.sourceImage = sourceImage
             let group = DispatchGroup()
-            let image = AWSRekognitionImage()
-            image?.bytes = UIImageJPEGRepresentation(self.sourceImage!, 0.6)
+            let imageJPG = AWSRekognitionImage()
+            imageJPG?.bytes = UIImageJPEGRepresentation(self.sourceImage!, 0.6)
             
             guard let request = AWSRekognitionRecognizeCelebritiesRequest() else {
                 puts("Unable to initialize AWSRekognitionDetectLabelsRequest.")
                 return
             }
-            request.image = image
+            request.image = imageJPG
             group.enter()
             self.recognition.recognizeCelebrities(request) { (response, error) in
                 if error == nil{
@@ -76,11 +75,10 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
                     }
                     // group.leave()
                 })
-                self.dismiss(animated: true, completion: {
-                    self.performSegue(withIdentifier: "detailSegue", sender: nil)
-                })
-                
+                self.performSegue(withIdentifier: "detailSegue", sender: nil)
             })
+            }
+            self.dismiss(animated: true, completion: nil)
         }
         present(cameraVC, animated: true, completion: nil)
         
