@@ -10,6 +10,7 @@ The following functionality is planned to be completed:
 
 - [X] User can take a picture of the celebrity
 - [X] User can upload the picture of a celebrity from their photo library
+- [X] User can login and logout
 - [ ] User can view previously recognized celebrities
 - [ ] User can tap a celebrity to view details, including popular and recent movies
 
