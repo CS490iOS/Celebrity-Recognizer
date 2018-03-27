@@ -9,7 +9,11 @@
 import UIKit
 
 class SavedCelebritiesTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var faceImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +24,7 @@ class SavedCelebritiesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

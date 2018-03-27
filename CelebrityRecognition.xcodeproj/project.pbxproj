@@ -13,6 +13,9 @@
 		FC06342020698B9D008E805E /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
 		FC06342120698B9D008E805E /* Pods_CelebrityRecognition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC0634242069BA6B008E805E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0634232069BA6A008E805E /* GoogleService-Info.plist */; };
+		FC063426206AA4B2008E805E /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC063425206AA4B2008E805E /* PostService.swift */; };
+		FC063428206AA553008E805E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC063427206AA553008E805E /* Post.swift */; };
+		FC06342A206AFEC6008E805E /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC063429206AFEC6008E805E /* StorageReference+Post.swift */; };
 		FC14B9502040B40B00FB0562 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14B94F2040B40B00FB0562 /* Celebrity.swift */; };
 		FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */; };
 		FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */; };
@@ -51,6 +54,9 @@
 		CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebrityRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D001536A1D68ED83213967 /* Pods-CelebrityRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0634232069BA6A008E805E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC063425206AA4B2008E805E /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		FC063427206AA553008E805E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FC063429206AFEC6008E805E /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
 		FC14B94F2040B40B00FB0562 /* Celebrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
 		FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 			children = (
 				FC14B94F2040B40B00FB0562 /* Celebrity.swift */,
 				FCBB64872044D7F7005E38F9 /* Movie.swift */,
+				FC063425206AA4B2008E805E /* PostService.swift */,
+				FC063427206AA553008E805E /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 				FC2DBF492036D12700CAD803 /* Models */,
 				FC472077202CBA9B0081B08C /* AppDelegate.swift */,
 				FC3DC5F22040A7F900435AD0 /* MovieAPIManager.swift */,
+				FC063429206AFEC6008E805E /* StorageReference+Post.swift */,
 				FCBB648A20468127005E38F9 /* Assets.xcassets */,
 				FC47207B202CBA9B0081B08C /* Main.storyboard */,
 				FC0634232069BA6A008E805E /* GoogleService-Info.plist */,
@@ -328,11 +337,14 @@
 				FCBB64882044D7F7005E38F9 /* Movie.swift in Sources */,
 				FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */,
 				FC70E2372038BE5E00B9F321 /* SettingsViewController.swift in Sources */,
+				FC063428206AA553008E805E /* Post.swift in Sources */,
 				FC3DC5F32040A7F900435AD0 /* MovieAPIManager.swift in Sources */,
 				FC70E2352038AC1D00B9F321 /* SavedCelebritiesViewController.swift in Sources */,
 				FC472080202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld in Sources */,
 				FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */,
+				FC06342A206AFEC6008E805E /* StorageReference+Post.swift in Sources */,
 				FC14B9502040B40B00FB0562 /* Celebrity.swift in Sources */,
+				FC063426206AA4B2008E805E /* PostService.swift in Sources */,
 				FC70E2392038C86500B9F321 /* CelebrityInfoViewController.swift in Sources */,
 				FC472078202CBA9B0081B08C /* AppDelegate.swift in Sources */,
 			);
