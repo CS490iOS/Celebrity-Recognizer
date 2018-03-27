@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>861660531608-6fjjl21tjb4a3n6gqnlktg53tfre03aj.apps.googleusercontent.com</string>
+	<string>899593024980-l2cvh9rju09fbroohh1hdsm0ka1bobcf.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.861660531608-6fjjl21tjb4a3n6gqnlktg53tfre03aj</string>
+	<string>com.googleusercontent.apps.899593024980-l2cvh9rju09fbroohh1hdsm0ka1bobcf</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBvf3r1s31QxKXCab91Pw2ZEqQ6kb3gErk</string>
+	<string>AIzaSyBUg-ffvVPWfujOANbRmaZ4DQyy-kewy08</string>
 	<key>GCM_SENDER_ID</key>
-	<string>861660531608</string>
+	<string>899593024980</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Shaurya.Instagram</string>
+	<string>com.CS490Team.CelebrityRecognition</string>
 	<key>PROJECT_ID</key>
-	<string>instagramclone-3bdaf</string>
+	<string>celebrity-recognition-701af</string>
 	<key>STORAGE_BUCKET</key>
-	<string>instagramclone-3bdaf.appspot.com</string>
+	<string>celebrity-recognition-701af.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:861660531608:ios:633bfedcf4a2e015</string>
+	<string>1:899593024980:ios:c99916c88ecf7bf7</string>
 	<key>DATABASE_URL</key>
-	<string>https://instagramclone-3bdaf.firebaseio.com</string>
+	<string>https://celebrity-recognition-701af.firebaseio.com</string>
 </dict>
 </plist>

@@ -91,6 +91,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // User Persistence
+        let user = Auth.auth().currentUser
+        
+        print(user?.email)
+        
+        if user != nil{
+            self.performSegue(withIdentifier: "loginSegue"){
+            }
+        }else{
+            print("No user logged in")
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,13 +133,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.textColor = UIColor.white
         self.passwordTextField.delegate = self
         self.emailTextField.delegate = self
-        
-
-        //backgroundImageView.image = UIImage(named: "LoginBGImage")
-        
-        
-
-        
     }
 
     override func didReceiveMemoryWarning() {

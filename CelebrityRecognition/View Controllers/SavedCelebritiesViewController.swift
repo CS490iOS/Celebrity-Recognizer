@@ -50,7 +50,6 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
                     }else{
                         print("No recognition Found")
                     }
-                    //print("1)\n\nRecognized celeb is: \(self.celebrityName)\n\n")
                 }else{
                     print("The error is : \n\n\n" + (error.debugDescription))
                 }
@@ -58,23 +57,28 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
             }
             group.wait()
             group.enter()
-            MovieApiManager().getCelebrity(searchQuery: self.celebrityName!, completion: { (celeb, error) in
+            MovieApiManager().getCelebrity(searchQuery: self.celebrityName!) { (celeb, error) in
                 if let celeb = celeb{
                     self.recognizedCelebrity = celeb
+                    print(self.recognizedCelebrity?.name)
+                }else{
+                    print("\nMovie API didn't work\n")
+                }
+                
+                group.enter()
+                MovieApiManager().getImage(id: self.recognizedCelebrity!.id){ (url, error) in
+                    if let url = url{
+                        print("\nURL returned is \(url.absoluteString)\n")
+                        self.imageUrl = url
+                    }else{
+                        print("URL NOT FOUND")
+                    }
+                    group.leave()
                 }
                 group.leave()
-            })
-            //group.wait()
-            //group.enter()
-            
-            
+            }
             group.notify(queue: .main, execute: {
-                MovieApiManager().getImage(id: self.recognizedCelebrity!.id, completion: { (url, error) in
-                    if let url = url{
-                        self.imageUrl = url
-                    }
-                    // group.leave()
-                })
+                //print("\nURL set is \(self.imageUrl?.absoluteString)\n")
                 self.performSegue(withIdentifier: "detailSegue", sender: nil)
             })
             }
@@ -115,7 +119,7 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
         
         var movies: [Movie] = []
         for movie in (self.recognizedCelebrity!.knownFor)!{
-            if(!(movie is NSNull)){
+            if movie != nil{
                 let temp = movie as! [String: Any]
                 let movie = Movie(dictionary: temp)
                 movies.append(movie)

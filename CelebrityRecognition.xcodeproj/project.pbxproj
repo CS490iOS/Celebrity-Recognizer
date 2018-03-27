@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5CA378850A2FBE300E4FB9AA /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
+		FC0633FA20698B9D008E805E /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
+		FC0633FB20698B9D008E805E /* Pods_CelebrityRecognition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC06342020698B9D008E805E /* Pods_CelebrityRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; };
+		FC06342120698B9D008E805E /* Pods_CelebrityRecognition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC0634242069BA6B008E805E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC0634232069BA6A008E805E /* GoogleService-Info.plist */; };
 		FC14B9502040B40B00FB0562 /* Celebrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14B94F2040B40B00FB0562 /* Celebrity.swift */; };
 		FC2DBF4D2036D17500CAD803 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */; };
 		FC322CA72036EDA6007E0366 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */; };
@@ -23,14 +28,29 @@
 		FCBB64862044D69E005E38F9 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB64852044D69E005E38F9 /* PosterCell.swift */; };
 		FCBB64882044D7F7005E38F9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB64872044D7F7005E38F9 /* Movie.swift */; };
 		FCBB648B20468128005E38F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBB648A20468127005E38F9 /* Assets.xcassets */; };
-		FCBB64AE204E0A33005E38F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCBB64AD204E0A33005E38F9 /* GoogleService-Info.plist */; };
 		FCEAA1102038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC06342220698B9E008E805E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC0633FB20698B9D008E805E /* Pods_CelebrityRecognition.framework in Embed Frameworks */,
+				FC06342120698B9D008E805E /* Pods_CelebrityRecognition.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AD7B56130FCEB504F44D88E /* Pods-CelebrityRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.release.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		CFF4E945219B2B5FE129F9FB /* Pods_CelebrityRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CelebrityRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D001536A1D68ED83213967 /* Pods-CelebrityRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CelebrityRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CelebrityRecognition/Pods-CelebrityRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		FC0634232069BA6A008E805E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC14B94F2040B40B00FB0562 /* Celebrity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrity.swift; sourceTree = "<group>"; };
 		FC2DBF4C2036D17500CAD803 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC322CA62036EDA5007E0366 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +68,6 @@
 		FCBB64852044D69E005E38F9 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		FCBB64872044D7F7005E38F9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FCBB648A20468127005E38F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FCBB64AD204E0A33005E38F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCEAA10F2038A74800F27FA0 /* SavedCelebritiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCelebritiesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC06342020698B9D008E805E /* Pods_CelebrityRecognition.framework in Frameworks */,
+				FC0633FA20698B9D008E805E /* Pods_CelebrityRecognition.framework in Frameworks */,
 				5CA378850A2FBE300E4FB9AA /* Pods_CelebrityRecognition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +160,8 @@
 				FC3DC5F22040A7F900435AD0 /* MovieAPIManager.swift */,
 				FCBB648A20468127005E38F9 /* Assets.xcassets */,
 				FC47207B202CBA9B0081B08C /* Main.storyboard */,
+				FC0634232069BA6A008E805E /* GoogleService-Info.plist */,
 				FC472083202CBA9B0081B08C /* LaunchScreen.storyboard */,
-				FCBB64AD204E0A33005E38F9 /* GoogleService-Info.plist */,
 				FC472086202CBA9B0081B08C /* Info.plist */,
 				FC47208C202CBF700081B08C /* awsconfiguration.json */,
 				FC47207E202CBA9B0081B08C /* CelebrityRecognition.xcdatamodeld */,
@@ -161,6 +182,7 @@
 				FC472072202CBA9B0081B08C /* Resources */,
 				688E68B57BEF9731BC242335 /* [CP] Embed Pods Frameworks */,
 				27CA9E8B67F47B766B0F20CE /* [CP] Copy Pods Resources */,
+				FC06342220698B9E008E805E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,8 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC47208D202CBF700081B08C /* awsconfiguration.json in Resources */,
+				FC0634242069BA6B008E805E /* GoogleService-Info.plist in Resources */,
 				FC472085202CBA9B0081B08C /* LaunchScreen.storyboard in Resources */,
-				FCBB64AE204E0A33005E38F9 /* GoogleService-Info.plist in Resources */,
 				FCBB648B20468128005E38F9 /* Assets.xcassets in Resources */,
 				FC47207D202CBA9B0081B08C /* Main.storyboard in Resources */,
 			);
@@ -453,6 +475,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWQXYA585K;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = CelebrityRecognition/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -472,6 +495,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TWQXYA585K;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = CelebrityRecognition/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

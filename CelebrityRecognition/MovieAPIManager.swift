@@ -12,7 +12,7 @@ class MovieApiManager{
     static let baseUrl = "https://api.themoviedb.org/3/movie/"
     static let searchUrl = "https://api.themoviedb.org/3/search/person"
     static let apiKey = "4aebe566ef8c2257a0ca6a337f1994ef"
-    static let imageUrlPrefix = "https://image.tmdb.org/t/p/w780/"
+    static let imageUrlPrefix = "https://image.tmdb.org/t/p/w780"
     var session: URLSession
     
     init() {
@@ -28,20 +28,24 @@ class MovieApiManager{
         let task = session.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                
                 let personDictionary = dataDictionary["results"] as! [[String: Any]]
                 
                 let name = personDictionary[0]["name"] as! String
                 let id = personDictionary[0]["id"] as! Int
-                let knownFor = personDictionary[0]["known_for"] as! NSArray
+                
+                let knownFor = personDictionary[0]["known_for"] as! [[String: Any]]
                 //for movie in knownFor{
                   //  print("\n\nmovie: \n \(movie)\n\n")
                 //}
                 
 
                 let celeb = Celebrity(name: name, id: id, knownFor: knownFor)
+                
                 completion(celeb, nil)
             
             } else {
+                print("Data not found\n")
                 completion(nil, error)
             }
         }
@@ -57,9 +61,7 @@ class MovieApiManager{
             if let data = data{
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let images = dataDictionary["profiles"] as! [[String: Any]]
-                
-                print("\n\n\n")
-                print(images)
+           
                 let imageUrlSuffix = images[0]["file_path"] as! String
                 
                 let imageUrl = MovieApiManager.imageUrlPrefix + imageUrlSuffix

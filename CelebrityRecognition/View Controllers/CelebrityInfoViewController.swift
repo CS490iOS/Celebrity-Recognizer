@@ -31,21 +31,6 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        cancelButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        cancelButton.layer.cornerRadius = 0.5 * cancelButton.bounds.size.width
-        let color = UIColor(patternImage: UIImage(named: "cancel_icon")!)
-        cancelButton.backgroundColor = color*/
-        /*
-        let button = UIButton()
-        button.frame = CGRect(x: 0, y: 0, width: 40, height: 40) //CGRectMake(0, 0, 40, 40)
-        let color = UIColor(patternImage: UIImage(named: "cancel_icon")!)
-        button.backgroundColor = color
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        let barButton = UIBarButtonItem()
-        barButton.customView = button
-        self.navigationItem.leftBarButtonItem = barButton
-         */
         
         // Gradient View at bottom of celebrity picture
         let gradient = CAGradientLayer()
@@ -68,6 +53,8 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
         }
         
         celebPicture.af_setImage(withURL: self.imageUrl!)
+        
+        
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{

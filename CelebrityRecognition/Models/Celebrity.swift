@@ -12,9 +12,9 @@ class Celebrity{
     var name: String
     var id: Int
     var imageUrl: URL?
-    var knownFor: NSArray?
+    var knownFor: [[String: Any]]?
     
-    init(name: String, id: Int, knownFor: NSArray){
+    init(name: String, id: Int, knownFor: [[String: Any]]){
         self.name = name
         self.id = id
         self.knownFor = knownFor
