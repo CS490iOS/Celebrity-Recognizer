@@ -14,10 +14,12 @@ class Movie{
     var overview: String
     var backDropUrl: URL?
     var releaseDate: String
+    var idNumber: Int
     
     init(dictionary: [String: Any]){
         title = dictionary["title"] as? String ?? "No Title"
         overview = dictionary["overview"] as? String ?? "No Overview"
+        idNumber = dictionary["id"] as! Int
         
         let posterPathString = dictionary["poster_path"] as? String ?? "No Poster Path URL"
         let baseURLString = "https://image.tmdb.org/t/p/w780"

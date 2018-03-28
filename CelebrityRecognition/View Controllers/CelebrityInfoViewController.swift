@@ -57,6 +57,17 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UICollectionViewCell
+        if let indexPath = collectionView.indexPath(for: cell){
+            let movie = Movies[indexPath.item]
+            let videoController = segue.destination as! VideoViewController
+            videoController.movie = movie
+        }
+    }
+    
+    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return Movies.count
     }

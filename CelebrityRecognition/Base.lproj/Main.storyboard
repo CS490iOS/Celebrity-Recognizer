@@ -226,6 +226,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7QP-bI-CiG">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="126"/>
+                                                    <gestureRecognizers/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -237,6 +238,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="posterView" destination="7QP-bI-CiG" id="c6V-t6-IaF"/>
+                                            <segue destination="Cyc-s5-7Er" kind="show" id="kOd-f3-MHg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -282,6 +284,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVg-jW-LRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="119" y="2378"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="JVG-te-dtC">
+            <objects>
+                <viewController id="Cyc-s5-7Er" customClass="VideoViewController" customModule="CelebrityRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2L-nm-vft">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrA-LV-7cK">
+                                <rect key="frame" x="0.0" y="149" width="375" height="368"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FF6-Jl-vfF">
+                                <rect key="frame" x="15" y="15" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="3gM-vc-mQF"/>
+                                    <constraint firstAttribute="height" constant="38" id="9pl-yQ-Zjt"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="cancel_icon"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="y4j-dT-Mbp" eventType="touchUpInside" id="3Gb-yr-qVo"/>
+                                    <action selector="onCancel:" destination="Cyc-s5-7Er" eventType="touchUpInside" id="NrP-4F-eI6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FF6-Jl-vfF" firstAttribute="leading" secondItem="D2L-nm-vft" secondAttribute="leading" constant="15" id="7By-Pn-U0X"/>
+                            <constraint firstItem="OrA-LV-7cK" firstAttribute="leading" secondItem="D2L-nm-vft" secondAttribute="leading" id="7tf-5f-fK3"/>
+                            <constraint firstAttribute="trailing" secondItem="OrA-LV-7cK" secondAttribute="trailing" id="Jg0-Ix-ZFa"/>
+                            <constraint firstItem="FF6-Jl-vfF" firstAttribute="top" secondItem="D2L-nm-vft" secondAttribute="top" constant="15" id="Vne-qu-IVB"/>
+                            <constraint firstItem="OrA-LV-7cK" firstAttribute="centerY" secondItem="D2L-nm-vft" secondAttribute="centerY" id="Z22-nJ-HWx"/>
+                            <constraint firstItem="aU1-VQ-LN1" firstAttribute="bottom" secondItem="OrA-LV-7cK" secondAttribute="bottom" constant="150" id="hnn-hj-hIb"/>
+                            <constraint firstItem="OrA-LV-7cK" firstAttribute="centerX" secondItem="D2L-nm-vft" secondAttribute="centerX" id="n2G-A7-YId"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aU1-VQ-LN1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="bAo-vS-jyQ"/>
+                    <connections>
+                        <outlet property="webView" destination="OrA-LV-7cK" id="cS0-Yr-AYU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnY-AD-1i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="2377.9610194902552"/>
         </scene>
         <!--Photo Picker View Controller-->
         <scene sceneID="GQm-Xl-ElV">
