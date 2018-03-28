@@ -2,7 +2,7 @@
 
 **Celebrity Recognizer** is a facial recognition app that uses AWS Rekognition to recognize faces of celebrities and bring up relevant information about them.
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -11,8 +11,14 @@ The following functionality is planned to be completed:
 - [X] User can take a picture of the celebrity
 - [X] User can upload the picture of a celebrity from their photo library
 - [X] User can login and logout
-- [ ] User can view previously recognized celebrities
-- [ ] User can tap a celebrity to view details, including popular and recent movies
+- [X] User can view previously recognized celebrities
+- [X] User can tap a celebrity to view details, including popular and recent movies
+
+## Additional Stories
+
+These additional stories are completed:
+
+- [X] User can view details about a celebrity's popular movies like trailer, release date, etc.
 
 ## Video Walkthrough
 
@@ -26,7 +32,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
-- [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+- [AlamofireImage](https://github.com/Alamofire/AlamofireImage) - for getting images from urls
+- [AWS SDK for iOS](https://github.com/aws/aws-sdk-ios) - for facial recognition
 
 
 ## Notes
