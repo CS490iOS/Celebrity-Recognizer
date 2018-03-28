@@ -206,9 +206,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-st-DOz">
-                                <rect key="frame" x="67" y="275" width="240" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-st-DOz">
+                                <rect key="frame" x="152" y="323.5" width="70" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -276,6 +275,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XUa-6W-Nda" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" constant="16" id="3L7-jJ-MXo"/>
+                            <constraint firstItem="OcB-st-DOz" firstAttribute="centerX" secondItem="VWf-CM-gka" secondAttribute="centerX" id="6Zn-xu-4fx"/>
                             <constraint firstItem="HdP-Me-CmA" firstAttribute="trailing" secondItem="1mu-4X-jiU" secondAttribute="trailing" id="B19-NN-G2r"/>
                             <constraint firstItem="zeO-KB-8Fd" firstAttribute="top" secondItem="1mu-4X-jiU" secondAttribute="top" constant="-20" id="FB7-pd-1Or"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="bottom" secondItem="zeO-KB-8Fd" secondAttribute="bottom" constant="130" id="HI1-Mr-uE3"/>
@@ -283,6 +283,7 @@
                             <constraint firstItem="zeO-KB-8Fd" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" id="LU0-Fi-flC"/>
                             <constraint firstItem="HdP-Me-CmA" firstAttribute="bottom" secondItem="1mu-4X-jiU" secondAttribute="bottom" id="Uk3-9b-lEZ"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="bottom" secondItem="RLs-KN-3OG" secondAttribute="bottom" constant="50" id="elM-vL-PK6"/>
+                            <constraint firstItem="HdP-Me-CmA" firstAttribute="top" secondItem="OcB-st-DOz" secondAttribute="bottom" id="h3A-XQ-QNE"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="trailing" secondItem="zeO-KB-8Fd" secondAttribute="trailing" id="mGy-2I-mhH"/>
                             <constraint firstItem="RLs-KN-3OG" firstAttribute="leading" secondItem="1mu-4X-jiU" secondAttribute="leading" constant="20" id="pIT-5m-8wl"/>
                             <constraint firstItem="1mu-4X-jiU" firstAttribute="trailing" secondItem="RLs-KN-3OG" secondAttribute="trailing" constant="20" id="rrA-Yu-we0"/>
@@ -411,11 +412,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-cn-cdr">
-                                <rect key="frame" x="16" y="293" width="343" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-cn-cdr">
+                                <rect key="frame" x="20" y="309.5" width="335" height="48"/>
                                 <color key="backgroundColor" red="0.99544221160000002" green="0.18044358490000001" blue="0.53602606060000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="26"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -425,6 +425,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LQ2-cn-cdr" firstAttribute="centerX" secondItem="YU2-UT-stL" secondAttribute="centerX" id="37W-uQ-znA"/>
+                            <constraint firstItem="LQ2-cn-cdr" firstAttribute="leading" secondItem="YU2-UT-stL" secondAttribute="leading" constant="20" id="4D6-kS-EPv"/>
+                            <constraint firstItem="LQ2-cn-cdr" firstAttribute="centerY" secondItem="YU2-UT-stL" secondAttribute="centerY" id="gOc-qP-fYf"/>
+                            <constraint firstAttribute="trailing" secondItem="LQ2-cn-cdr" secondAttribute="trailing" constant="20" id="ty3-k8-aHx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IeC-dp-BUy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="SEW-du-6Gv"/>
