@@ -120,9 +120,9 @@ class SavedCelebritiesViewController: UIViewController, UITableViewDelegate, UIT
         
     }
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
+   // public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       // return 200
+    //}
     
     override func viewDidLoad() {
         super.viewDidLoad()

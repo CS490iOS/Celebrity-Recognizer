@@ -7,23 +7,39 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class VideoViewController: UIViewController {
 
     var movie: Movie?
     
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var smallPosterImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        posterImageView.af_setImage(withURL: (movie?.backDropUrl!)!)
+        smallPosterImageView.af_setImage(withURL: (movie?.posterUrl!)!)
+        titleLabel.text = movie?.title.uppercased()
+        overviewLabel.text = movie?.overview
+        dateLabel.text = movie?.releaseDate
+        
+        smallPosterImageView.layer.borderWidth = 1
+        let color = UIColor(red: 255.0/255.0, green: 41.0/255.0, blue: 83.0/255.0, alpha: 1)
+        smallPosterImageView.layer.borderColor = color.cgColor
+        smallPosterImageView.layer.masksToBounds = true
         
         if let movie = movie {
             let movieID = movie.idNumber
             movieTrailers(id: movieID)
-            
         }
-
-        // Do any additional setup after loading the view.
+        
     }
     
     func movieTrailers(id: Int){
