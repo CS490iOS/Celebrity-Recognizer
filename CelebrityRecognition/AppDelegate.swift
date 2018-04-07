@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         /*AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
         AWSDDLog.sharedInstance.logLevel = .info*/
+        UIApplication.shared.statusBarStyle = .lightContent
+
         
         let credentialsProvider = AWSCognitoCredentialsProvider(
             regionType: .USWest2,
