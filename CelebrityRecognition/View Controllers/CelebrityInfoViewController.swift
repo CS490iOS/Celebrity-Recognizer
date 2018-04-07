@@ -22,7 +22,6 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
     @IBAction func onCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    @IBOutlet weak var gradientView: UIView!
     // Celebrity Properties
     var recognizedCelebrity : Celebrity?
     var imageUrl: URL?
@@ -31,13 +30,14 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Gradient View at bottom of celebrity picture
-        let gradient = CAGradientLayer()
-        gradient.frame = gradientView.bounds
-        gradient.colors = [UIColor.clear.cgColor, UIColor.darkGray.cgColor, UIColor.black.cgColor]
-        gradient.locations = [0, 0.65, 1]
-        gradientView.layer.mask = gradient
+
+        // Round Celebrity Picture
+        celebPicture.layer.cornerRadius = 0.5 * celebPicture.bounds.size.width
+        celebPicture.clipsToBounds = true
+        let color = UIColor(red: 255.0/255.0, green: 41.0/255.0, blue: 83.0/255.0, alpha: 1)
+        celebPicture.layer.borderColor = color.cgColor
+        celebPicture.layer.borderWidth = CGFloat(2.0)
+        celebPicture.layer.masksToBounds = true
         
         // Collection View Stuff
         collectionView.dataSource = self
@@ -78,7 +78,8 @@ class CelebrityInfoViewController: UIViewController, UICollectionViewDataSource 
         
         cell.posterView.af_setImage(withURL: movie.posterUrl!)
         cell.layer.borderWidth = 1.4
-        cell.layer.borderColor = UIColor.white.cgColor
+        let color = UIColor(red: 255.0/255.0, green: 41.0/255.0, blue: 83.0/255.0, alpha: 1)
+        cell.layer.borderColor = color.cgColor
         
         
         return cell
