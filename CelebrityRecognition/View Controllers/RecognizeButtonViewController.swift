@@ -98,11 +98,6 @@ class RecognizeButtonViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        recognizeButton.layer.cornerRadius = 0.5 * recognizeButton.bounds.size.width
-        recognizeButton.clipsToBounds = true
-        recognizeButton.layer.borderWidth = 1.5
-        recognizeButton.layer.borderColor = UIColor.black.cgColor
-        
     }
     
     

@@ -11,12 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Bold</string>
-        </array>
-        <array key="Avenir.ttc">
-            <string>Avenir-Black</string>
-        </array>
         <array key="GujaratiSangamMN.ttc">
             <string>GujaratiSangamMN</string>
         </array>
@@ -57,9 +51,9 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-mB-xNd">
-                                <rect key="frame" x="50" y="369.5" width="275" height="41"/>
+                                <rect key="frame" x="50" y="369.5" width="275" height="38"/>
                                 <color key="backgroundColor" red="1" green="0.16078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="21"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -68,15 +62,15 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey0-5b-wfl">
-                                <rect key="frame" x="118" y="470.5" width="138.5" height="20.5"/>
+                                <rect key="frame" x="118" y="467.5" width="138.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83f-3u-1AB">
-                                <rect key="frame" x="50" y="506.5" width="275" height="36"/>
+                                <rect key="frame" x="50" y="503.5" width="275" height="33"/>
                                 <color key="backgroundColor" red="0.039215687659999998" green="0.34509804840000002" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -124,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="34.632683658170919"/>
+            <point key="canvasLocation" x="953" y="-862"/>
         </scene>
         <!--Previously Searched-->
         <scene sceneID="qoc-Ps-IeK">
@@ -196,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Oc-tj-QRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135.19999999999999" y="1548.5757121439281"/>
+            <point key="canvasLocation" x="-135" y="1355"/>
         </scene>
         <!--Search Result-->
         <scene sceneID="20d-zM-z3K">
@@ -290,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVg-jW-LRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568.79999999999995" y="2377.9610194902552"/>
+            <point key="canvasLocation" x="953" y="2080"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="JVG-te-dtC">
@@ -376,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnY-AD-1i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1316" y="2377.0614692653676"/>
+            <point key="canvasLocation" x="953" y="2841"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VaG-ul-gQV">
@@ -405,7 +399,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qu-LA-rog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="35"/>
+            <point key="canvasLocation" x="953" y="-127"/>
         </scene>
         <!--Settings-->
         <scene sceneID="hjh-nr-if4">
@@ -418,7 +412,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-cn-cdr">
                                 <rect key="frame" x="20" y="313.5" width="335" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.16078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="23"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -440,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wh-RX-uSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2702" y="1549"/>
+            <point key="canvasLocation" x="2041" y="1355"/>
         </scene>
         <!--Recent-->
         <scene sceneID="69R-45-o68">
@@ -453,7 +447,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" red="1" green="0.16078431372549018" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -464,9 +458,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OO0-f3-e1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="779"/>
+            <point key="canvasLocation" x="-135" y="618"/>
         </scene>
-        <!--Recognize Button View Controller-->
+        <!--Discover-->
         <scene sceneID="1tx-6H-8XG">
             <objects>
                 <viewController id="sYX-td-x1O" customClass="RecognizeButtonViewController" customModule="CelebrityRecognition" customModuleProvider="target" sceneMemberID="viewController">
@@ -474,21 +468,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-xG-3Nk">
-                                <rect key="frame" x="116" y="204" width="143" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-xG-3Nk">
+                                <rect key="frame" x="138" y="194" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Wn5-Sl-ttZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="thF-ZE-3YS"/>
+                                </constraints>
+                                <state key="normal" image="icons8-google-images-filled-100">
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="onCamera:" destination="sYX-td-x1O" eventType="touchUpInside" id="oEb-1a-Iea"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the camera to get started!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgq-uO-Hib">
+                                <rect key="frame" x="62.5" y="438" width="251" height="23"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.16078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dgq-uO-Hib" firstAttribute="top" secondItem="uRp-xG-3Nk" secondAttribute="bottom" constant="144" id="1ZW-7v-j9j"/>
+                            <constraint firstItem="Dgq-uO-Hib" firstAttribute="centerX" secondItem="KOY-Jm-8t3" secondAttribute="centerX" id="PDY-oc-aE3"/>
+                            <constraint firstItem="uRp-xG-3Nk" firstAttribute="top" secondItem="lHv-Ae-gnX" secondAttribute="top" constant="130" id="S0K-DB-4gP"/>
+                            <constraint firstItem="uRp-xG-3Nk" firstAttribute="centerX" secondItem="KOY-Jm-8t3" secondAttribute="centerX" id="UhS-hD-nSP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lHv-Ae-gnX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cag-HU-eNv"/>
+                    <navigationItem key="navigationItem" title="Discover" id="cag-HU-eNv"/>
                     <connections>
                         <outlet property="recognizeButton" destination="uRp-xG-3Nk" id="zm7-ih-5GK"/>
                         <segue destination="y4j-dT-Mbp" kind="show" identifier="detailSegue" id="31t-V3-Xji"/>
@@ -496,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtX-Jl-M0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="1643"/>
+            <point key="canvasLocation" x="952.79999999999995" y="1355.1724137931035"/>
         </scene>
         <!--Settings-->
         <scene sceneID="36E-eS-Ihe">
@@ -509,7 +518,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" red="1" green="0.16078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -520,7 +529,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4D-6Z-DJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3040.8000000000002" y="779.46026986506752"/>
+            <point key="canvasLocation" x="2041" y="618"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NZ2-mf-Zwr">
@@ -534,6 +543,7 @@
                         <color key="tintColor" red="1" green="0.16078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" red="1" green="0.16078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -544,11 +554,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhO-Mu-WMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="865.36731634182911"/>
+            <point key="canvasLocation" x="953" y="618"/>
         </scene>
     </scenes>
     <resources>
         <image name="LoginBGImage" width="572" height="966"/>
+        <image name="icons8-google-images-filled-100" width="100" height="100"/>
         <image name="placeholder" width="104" height="104"/>
         <image name="profile_tab" width="25" height="25"/>
         <image name="reel_tabbar_icon" width="25" height="25"/>
