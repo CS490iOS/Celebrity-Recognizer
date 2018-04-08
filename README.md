@@ -24,7 +24,7 @@ These additional stories are completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/naoEZK8.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='FinalDemo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
